@@ -1,3 +1,19 @@
+/* Importación de fuentes tipográficas */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Estilos generales */
+* {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.titulo{
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
+}
+
 .App {
   text-align: center;
 }
