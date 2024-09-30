@@ -17,5 +17,8 @@ Instalar dependencia de íconos de primereact:
 Instalar depedencia de ruteo:
 * npm install react-router-dom
 
+Instalar tooltip:
+* npm install react-tooltip
+
 Renderizar proyecto:
 * npm start

@@ -1,65 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './pages.css';
+
+import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import { DataView } from 'primereact/dataview';
-import { Rating } from 'primereact/rating';
-import { Tag } from 'primereact/tag';
-import { ProductService } from '../services/ProductService';
 
 function Categoria() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    ProductService.getProductsSmall().then((data) => setProducts(data.slice(0, 5)));
-  }, []);
-
-  const getSeverity = (product) => {
-    switch (product.inventoryStatus) {
-      case 'EN STOCK':
-        return 'success';
-
-      case 'ÚLTIMOS':
-        return 'warning';
-
-      case 'SIN STOCK':
-        return 'danger';
-
-      default:
-        return null;
-    }
-  };
-
-  const itemTemplate = (product) => {
-    return (
-      <div className="col-12">
-        <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
-          <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`} alt={product.name} />
-          <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
-            <div className="flex flex-column align-items-center sm:align-items-start gap-3">
-              <div className="text-2xl font-bold text-900">{product.name}</div>
-              <Rating value={product.rating} readOnly cancel={false}></Rating>
-              <div className="flex align-items-center gap-3">
-                <span className="flex align-items-center gap-2">
-                  <i className="pi pi-tag"></i>
-                  <span className="font-semibold">{product.category}</span>
-                </span>
-                <Tag value={product.inventoryStatus} severity={getSeverity(product)}></Tag>
-              </div>
-            </div>
-            <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
-              <span className="text-2xl font-semibold">${product.price}</span>
-              <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'ÚLTIMOS'}></Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+  const coleccionCards = [
+    {
+      title: 'Xilófono',
+      subTitle: 'Instrumento de aire',
+      image: 'https://images.pexels.com/photos/26545471/pexels-photo-26545471/free-photo-of-enfoque-selectivo-del-xilofono.jpeg',
+      content: 'El xilófono es un instrumento musical de percusión que consta de diferentes láminas de madera ubicadas de modo horizontal.'
+    },
+    {
+      title: 'Redoblante',
+      subTitle: 'Instrumento de percusión',
+      image: 'https://images.pexels.com/photos/5650792/pexels-photo-5650792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      content: 'Tambor de caja prolongada, sin bordones en la cara inferior, usado en las orquestas y bandas militares.'
+    },
+  ]
 
   return (
     <div className="Categoria">
-      <h1 className='titulo'>Categoría</h1>
+      <h1 className='titulo'>Categorías</h1>
 
-      <DataView value={products} itemTemplate={itemTemplate} />
+      <div className='colec-cards'>
+        {coleccionCards.map((card, index) => (
+          <Card key={index} title={card.title} subTitle={card.subTitle}
+            footer={
+              <div className='flex flex-wrap justify-content-center gap-2'>
+                <Button label="Save" icon="pi pi-check" className='btn-save' />
+                <Button label="Cancel" icon="pi pi-times" className='btn-delete' />
+              </div>
+            }
+            header={
+              <img alt="Card" src={card.image} className='img-card' />
+            }
+            className="md:w-25rem">
+            <p className="m-0">
+              {card.content}
+            </p>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 };
