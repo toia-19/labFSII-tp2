@@ -1,8 +1,8 @@
 import './Carrusel.css';
 import React, { useState, useEffect } from 'react';
 import { Galleria } from 'primereact/galleria';
-import { PhotoService } from './PhotoService';
-        
+import { PhotoService } from '../../services/PhotoService';
+
 function Carrusel() {
     const [images, setImages] = useState(null);
 

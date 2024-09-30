@@ -5,9 +5,8 @@ import Carrusel from '../components/Carrusel/Carrusel';
 
 function Home () {
   return (
-    <div>
+    <div className='Home'>
         <h1 className='titulo'>Clave de Sol</h1>
-        
         <Carrusel/>
     </div>
   );

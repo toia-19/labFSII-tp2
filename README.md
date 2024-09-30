@@ -6,7 +6,10 @@ Comando de creación:
 * npx create-react-app name-app
 
 Comando de instalación de primereact:
-* npm i primereact
+* npm install primereact
+
+Comando de instalación de primeflex:
+* npm install primeflex
 
 Instalar dependencia de íconos de primereact:
 * npm install primereact primeicons

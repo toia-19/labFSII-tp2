@@ -2,9 +2,8 @@ import React from 'react';
 
 function Informacion () {
   return (
-    <div>
-      <h1>Información</h1>
-      
+    <div className='Informacion'>
+      <h1 className='titulo'>Información</h1>
       
     </div>
   );
