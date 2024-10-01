@@ -1,5 +1,7 @@
 /* ESTILOS EN CATEGORÍAS  */
 @media (min-width: 300px) and (max-width: 750px) {
+
+    /* Estilos correspondientes a "Categoría" */
     .container-card {
         margin: 0;
         width: 50%;
@@ -48,15 +50,24 @@
         background-color: rgb(47, 168, 255);
     }
 
+    #img-carrusel{
+        width: 95%;
+    }
+
 }
 
 @media (min-width: 750px) {
     /* ESTILOS GENERALES */
-    .Home, .Popular, .Categoria {
+    .Popular, .Categoria {
         width: 100%;
         padding-bottom: 4rem;
     }
 
+    .pantalla1{
+        display: flex;
+    }
+
+    /* Estilos correspondientes a "Categoría" */
     .p-card-title {
         font-size: 2rem;
         font-weight: 600;
@@ -81,6 +92,37 @@
 
     .btn-guardar {
         background-color: rgb(47, 168, 255);
+    }
+
+    .seccion-aside {
+        width: 20%;
+
+        margin: 1rem;
+        padding-top: 4rem;
+
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .seccion-principal {
+        width: 80%;
+        height: 100%;
+
+        margin: 1rem;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #img-carrusel{
+        width: 100%;
+        height: 45rem;
+    }
+
+    .seccion-bottom{
+        width: 100%;
+        order: 3;
     }
 }
 

@@ -2,9 +2,11 @@
 .carrusel{
     margin: 0;
     width: 100%;
+
+    padding-bottom: 1rem;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .img-carrusel{
@@ -19,11 +21,9 @@ button{
     border-radius: 0.5rem;
     border-width: 1px;
 
-    border-color: #7d751b7c;
-    background-color: #7d751b7c;
+    background-color: rgb(60, 60, 98);
 }
 
 button:hover{
-    border-color: #fff9b6c7;
-    background-color: #fff9b6c7;
+    background-color: rgb(80, 80, 127)
 }
