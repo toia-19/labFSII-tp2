@@ -7,6 +7,9 @@ function Home () {
   return (
     <div className='Home'>
         <h1 className='titulo'>Clave de Sol</h1>
+
+        
+        <h2 className='subtitulo'>Lo que podés encontrar...</h2>
         <Carrusel/>
     </div>
   );

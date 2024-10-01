@@ -24,24 +24,26 @@ function Categoria() {
     <div className="Categoria">
       <h1 className='titulo'>Categorías</h1>
 
-      <div className='colec-cards'>
-        {coleccionCards.map((card, index) => (
-          <Card key={index} title={card.title} subTitle={card.subTitle}
-            footer={
-              <div className='flex flex-wrap justify-content-center gap-2'>
-                <Button label="Save" icon="pi pi-check" className='btn-save' />
-                <Button label="Cancel" icon="pi pi-times" className='btn-delete' />
-              </div>
-            }
-            header={
-              <img alt="Card" src={card.image} className='img-card' />
-            }
-            className="md:w-25rem">
-            <p className="m-0">
-              {card.content}
-            </p>
-          </Card>
-        ))}
+      <div className='conteiner-card'>
+        <div className='colec-cards'>
+          {coleccionCards.map((card, index) => (
+            <Card key={index} title={card.title} subTitle={card.subTitle}
+              footer={
+                <div id="acciones" className='flex flex-wrap justify-content-center gap-2'>
+                  <Button label="Me Gusta" icon="pi pi-heart" className='btn-megusta' />
+                  <Button label="Guardar" icon="pi pi-cart-plus" className='btn-guardar' />
+                </div>
+              }
+              header={
+                <img alt="Card" src={card.image} className='img-card' />
+              }
+              className="md:w-25rem">
+              <p className="p-card">
+                {card.content}
+              </p>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
