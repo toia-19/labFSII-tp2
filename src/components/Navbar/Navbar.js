@@ -15,7 +15,7 @@ function Navbar() {
             label: 'Home', icon: 'pi pi-fw pi-home', command: () => { navigate('/') }
         },
         {
-            label: 'Información', icon: 'pi pi-info-circle', command: () => { navigate('/informacion') }
+            label: 'Popular', icon: 'pi pi-heart', command: () => { navigate('/popular') }
         },
         // Menú desplegable -> categorías de instrumentos
         {

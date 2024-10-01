@@ -14,7 +14,7 @@ import 'primeflex/primeflex.css';
 // VISTAS
 import Home from './pages/Home';
 
-import Informacion from './pages/Informacion';
+import Popular from './pages/Popular';
 
 import Categoria from './pages/Categoria';
 
@@ -29,7 +29,7 @@ function App() {
         <Navbar />
         <Routes >
           <Route exact path='/' element={ <Home/> }></Route>
-          <Route exact path='/informacion' element={ <Informacion/> }></Route>
+          <Route exact path='/popular' element={ <Popular/> }></Route>
           <Route exact path='/categoria' element={ <Categoria/> }></Route>
         </Routes>
         <Footer/>
